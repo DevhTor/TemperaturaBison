@@ -68,10 +68,10 @@
 /* Copy the first part of user declarations.  */
 
 /* Line 189 of yacc.c  */
-#line 1 "temp.y"
+#line 1 "ej1.y"
 
-#include <stdio.h>
 int numMedidas = 0;
+#include <stdio.h>
 
 
 /* Line 189 of yacc.c  */
@@ -122,7 +122,7 @@ typedef union YYSTYPE
 {
 
 /* Line 214 of yacc.c  */
-#line 5 "temp.y"
+#line 5 "ej1.y"
 
 int valInt;
 float valFloat;
@@ -425,7 +425,7 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    15,    15,    17,    18,    20,    26,    27
+       0,    15,    15,    18,    19,    21,    27,    28
 };
 #endif
 
@@ -1325,28 +1325,29 @@ yyreduce:
         case 2:
 
 /* Line 1455 of yacc.c  */
-#line 15 "temp.y"
-    {printf("Temperatura Media en Total: %f C\n", (yyvsp[(1) - (1)].valFloat)/(float)numMedidas);}
+#line 15 "ej1.y"
+    {printf("Temperatura Media en Total: %f C\n",
+(yyvsp[(1) - (1)].valFloat)/(float)numMedidas);}
     break;
 
   case 3:
 
 /* Line 1455 of yacc.c  */
-#line 17 "temp.y"
+#line 18 "ej1.y"
     {(yyval.valFloat) = (yyvsp[(1) - (2)].valFloat) + (yyvsp[(2) - (2)].valFloat); numMedidas++;}
     break;
 
   case 4:
 
 /* Line 1455 of yacc.c  */
-#line 18 "temp.y"
+#line 19 "ej1.y"
     {(yyval.valFloat) = (yyvsp[(1) - (1)].valFloat); numMedidas++;}
     break;
 
   case 5:
 
 /* Line 1455 of yacc.c  */
-#line 20 "temp.y"
+#line 21 "ej1.y"
     { if ((yyvsp[(1) - (2)].valInt) == 12) {
  printf ("Temp a las 12 son: %f C\n", (yyvsp[(2) - (2)].valFloat));
  }
@@ -1357,21 +1358,21 @@ yyreduce:
   case 6:
 
 /* Line 1455 of yacc.c  */
-#line 26 "temp.y"
+#line 27 "ej1.y"
     {(yyval.valFloat) = (yyvsp[(1) - (2)].valFloat);}
     break;
 
   case 7:
 
 /* Line 1455 of yacc.c  */
-#line 27 "temp.y"
+#line 28 "ej1.y"
     {(yyval.valFloat) = (((yyvsp[(1) - (2)].valFloat) - 32.0) * 5.0) / 9.0;}
     break;
 
 
 
 /* Line 1455 of yacc.c  */
-#line 1375 "y.tab.c"
+#line 1376 "y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1583,19 +1584,13 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 29 "temp.y"
+#line 30 "ej1.y"
 
-main() 
-{    
-    yyparse();
-
-}
-
-yyerror (s) /* Llamada por yyparse ante un error*/
-
- char *s;
- {
-     printf ("%s\n", s);
+int yyerror(char *m){
+   fprintf(stderr,"Error: %s\n",m);
+   return(1);
  }
-
+main() {
+ yyparse();
+}
 

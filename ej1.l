@@ -1,4 +1,4 @@
-%{  
+%{
 #include <stdlib.h>
 #include "y.tab.h"
 %}
@@ -11,4 +11,3 @@ F {return tFarenheit;}
 {real} {yylval.valFloat = atof(yytext); return tValorTemperatura;}
 . ;
 \n ;
-%%

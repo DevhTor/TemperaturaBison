@@ -364,9 +364,9 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "temp.l"
+#line 1 "ej1.l"
 #define INITIAL 0
-#line 2 "temp.l"
+#line 2 "ej1.l"
 #include <stdlib.h>
 #include "y.tab.h"
 #line 373 "lex.yy.c"
@@ -520,7 +520,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 7 "temp.l"
+#line 7 "ej1.l"
 
 #line 526 "lex.yy.c"
 
@@ -607,37 +607,37 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 8 "temp.l"
+#line 8 "ej1.l"
 {return tCentigrados;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 9 "temp.l"
+#line 9 "ej1.l"
 {return tFarenheit;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 10 "temp.l"
+#line 10 "ej1.l"
 {yylval.valInt = atoi(yytext); return tHora;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 11 "temp.l"
+#line 11 "ej1.l"
 {yylval.valFloat = atof(yytext); return tValorTemperatura;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 12 "temp.l"
+#line 12 "ej1.l"
 ;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 13 "temp.l"
+#line 13 "ej1.l"
 ;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 14 "temp.l"
+#line 14 "ej1.l"
 ECHO;
 	YY_BREAK
 #line 644 "lex.yy.c"
@@ -1526,4 +1526,4 @@ int main()
 	return 0;
 	}
 #endif
-#line 14 "temp.l"
+#line 14 "ej1.l"
